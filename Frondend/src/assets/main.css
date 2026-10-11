@@ -1,0 +1,69 @@
+@import "tailwindcss";
+
+@theme {
+  /* Colors */
+  --color-brand-deep: #1F4B2C;
+  --color-brand-sidebar: #275836;
+  --color-brand-active: #4D7111;
+  --color-brand-bright: #C3E956;
+  --color-brand-accent: #91EAAF;
+  --color-brand-darkbtn: #3F4743;
+
+  --color-mint-50: #F4FFFC;
+  --color-mint-100: #EAFFE9;
+  --color-mint-200: #D5F5DD;
+
+  /* Font Family */
+  --font-sans: "Plus Jakarta Sans", sans-serif;
+
+  /* Border Radius */
+  --radius-3xl: 1.75rem;
+  --radius-4xl: 2.25rem;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Untuk Chrome, Safari, dan Opera */
+.element::-webkit-scrollbar {
+  display: none;
+}
+
+/* Untuk Firefox dan IE/Edge */
+.element {
+  -ms-overflow-style: none;  /* IE dan Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+/* Map Pulsing Markers */
+@keyframes pulse-ring {
+  0% { 
+    transform: scale(0.95); 
+    opacity: 0.8; 
+  }
+  50% { 
+    transform: scale(1.6); 
+    opacity: 0; 
+  }
+  100% { 
+    transform: scale(0.95); 
+    opacity: 0; 
+  }
+}
+
+.sonar-emitter {
+  position: relative;
+}
+
+.sonar-wave {
+  position: absolute;
+  top: -6px;
+  left: -6px;
+  right: -6px;
+  bottom: -6px;
+  border-radius: 9999px;
+  animation: pulse-ring 2.2s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+}
+
